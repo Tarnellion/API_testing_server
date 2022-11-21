@@ -1,0 +1,26 @@
+{
+  "name": "api_testing_server",
+  "version": "1.0.0",
+  "description": "API testing server",
+  "main": "index.js",
+  "scripts": {
+    "dev": "open-cli http://localhost:5000 && nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tarnellion/API_testing_server.git"
+  },
+  "author": "Taras Govorukha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tarnellion/API_testing_server/issues"
+  },
+  "homepage": "https://github.com/Tarnellion/API_testing_server#readme",
+  "dependencies": {
+    "expres": "^0.0.5",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^2.0.20",
+    "open-cli": "^7.1.0",
+    "very-simple-fetch": "^0.2.0"
+  }
+}
