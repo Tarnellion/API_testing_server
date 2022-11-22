@@ -1,0 +1,92 @@
+<head>
+  <!-- заголовок документа -->
+  <title>Mock API</title>
+  <!-- иконка -->
+  <link rel="icon" href="icon.png" />
+  <!-- Гугл-шрифт -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+    rel="stylesheet"
+  />
+  <!-- bootstrap -->
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous"
+  />
+  <!-- bootstrap-icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+  />
+  <!-- стили -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 class="text-center my-3">Mock API</h1>
+    </header>
+
+    <main>
+      <div>
+        <h3 class="my-3">My projects</h3>
+        <!-- список существующих проектов -->
+        <ul class="list-group" id="project_list"></ul>
+      </div>
+
+      <div>
+        <h3 class="my-3">New project</h3>
+        <!-- форма для создания нового проекта -->
+        <form id="project_create">
+          <div class="mb-2">
+            <label for="project_name" class="form-label">Project name</label>
+            <!-- поле для ввода названия проекта -->
+            <input
+              type="text"
+              class="form-control mt-2"
+              name="project_name"
+              id="project_name"
+              aria-describedby="project_name"
+              placeholder="Project name"
+            />
+          </div>
+
+          <details class="mt-4">
+            <summary>Enter or paste project data</summary>
+            <!-- поле для ввода/вставки данных для проекта -->
+            <textarea
+              class="form-control mt-2"
+              name="project_data"
+              id="project_data_paste"
+              rows="10"
+            ></textarea>
+          </details>
+          <div class="mt-4">
+            <label for="project_data_upload" class="form-label"
+              >Upload project data</label
+            >
+            <!-- поле для загрузки файла с данными для проекта -->
+            <!-- принимает только JSON-файлы в единственном числе -->
+            <input
+              class="form-control mt-2"
+              type="file"
+              accept=".json"
+              name="project_data_upload"
+              id="project_data_upload"
+              aria-describedby="project_data_upload"
+            />
+          </div>
+          <!-- кнопка для создания проекта -->
+          <button class="btn btn-success my-4">Create project</button>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <!-- скрипт-модуль -->
+  <script src="script.js" type="module"></script>
+</body>
