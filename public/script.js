@@ -2,7 +2,7 @@ import simpleFetch from "/node_modules/very-simple-fetch/index.js";
 import todos from "./data/todos.js";
 import { isJson } from "./utils.js";
 
-simpleFetch.baseUrl = "http://localhost:5000/project";
+simpleFetch.baseUrl = "http://localhost:6000/project";
 
 async function fetchProjects() {
   const { data, error } = await simpleFetch.get({ customCache: false });
